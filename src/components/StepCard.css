@@ -1,0 +1,32 @@
+.step-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--white);
+}
+
+.step-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--tint);
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.step-card-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.step-card-text {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}

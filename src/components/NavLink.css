@@ -1,0 +1,39 @@
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link--active {
+  color: var(--primary);
+}
+
+.nav-link--active::after {
+  transform: scaleX(1);
+}

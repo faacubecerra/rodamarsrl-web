@@ -1,0 +1,157 @@
+.contacto-intro {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.contacto-intro h1 {
+  margin-bottom: 16px;
+}
+
+.contacto-intro p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Columna de datos */
+.contacto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.contacto-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.contacto-list li svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.contacto-list a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.maps-link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 28px;
+}
+
+.maps-link:hover {
+  text-decoration: underline;
+}
+
+.contacto-whatsapp-btn {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.map-placeholder {
+  aspect-ratio: 16 / 10;
+  border: 1.5px dashed #c7d3dc;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Formulario */
+.contacto-form-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+}
+
+.contacto-form-panel h2 {
+  margin-bottom: 6px;
+}
+
+.contacto-form-subtitle {
+  margin-bottom: 28px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.contacto-submit-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.contacto-form-success {
+  background: var(--tint);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-title {
+  max-width: 44ch;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 820px;
+}
+
+@media (max-width: 880px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contacto-form-panel {
+    padding: 28px;
+  }
+}

@@ -1,0 +1,43 @@
+.brand-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--white);
+  text-align: center;
+}
+
+.brand-badge--compact {
+  padding: 14px 20px;
+}
+
+.brand-badge-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+
+.brand-badge-mark img {
+  height: 32px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.brand-badge-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.brand-badge-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
