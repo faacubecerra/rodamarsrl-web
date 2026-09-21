@@ -1,4 +1,5 @@
-import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import { useSeo } from '../hooks/useSeo';
+import { PAGES } from '../seo';
 import Button from '../components/Button';
 import StatCard from '../components/StatCard';
 import FeatureCard from '../components/FeatureCard';
@@ -81,7 +82,7 @@ const FEATURES = [
 ];
 
 function Home() {
-  useDocumentTitle('Rodamar SRL — Rodamientos y retenes');
+  useSeo(PAGES.home);
 
   return (
     <>
@@ -121,9 +122,10 @@ function Home() {
           </div>
           <PhotoFrame
             src={heroPhoto}
-            alt="Frente del depósito de Rodamar SRL"
+            alt="Frente del depósito de Rodamar SRL, distribuidor de rodamientos y retenes en Rosario"
             ratio="4 / 5"
             className="hero-photo"
+            priority
           />
         </div>
       </section>
@@ -161,12 +163,20 @@ function Home() {
           <div className="installations-gallery">
             <PhotoFrame
               src={depositoFrente}
-              alt="Frente panorámico del depósito"
+              alt="Frente panorámico del depósito de rodamientos de Rodamar SRL en Rosario"
               ratio="21 / 9"
               className="installations-gallery-main"
             />
-            <PhotoFrame src={depositoInterior} alt="Interior del depósito" ratio="4 / 3" />
-            <PhotoFrame src={depositoRacks} alt="Racks del depósito" ratio="4 / 3" />
+            <PhotoFrame
+              src={depositoInterior}
+              alt="Interior del depósito de Rodamar con stock de rodamientos y retenes"
+              ratio="4 / 3"
+            />
+            <PhotoFrame
+              src={depositoRacks}
+              alt="Racks de almacenamiento del depósito con sistema WMS"
+              ratio="4 / 3"
+            />
           </div>
         </div>
       </section>
@@ -255,7 +265,10 @@ function Home() {
               </li>
               <li>
                 <IconPhone />
-                <span>+54 9 341 435-1216 / +54 9 341 418-0100</span>
+                <span>
+                  <a href="tel:+5493414351216">+54 9 341 435-1216</a> /{' '}
+                  <a href="tel:+5493414180100">+54 9 341 418-0100</a>
+                </span>
               </li>
               <li>
                 <IconWhatsapp />

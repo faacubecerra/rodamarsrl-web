@@ -16,7 +16,10 @@ function FaqItem({ question, answer }) {
         <span>{question}</span>
         <IconChevronDown className="faq-item-icon" />
       </button>
-      {open && <p className="faq-item-answer">{answer}</p>}
+      {/* Siempre en el DOM (con `hidden`) para que buscadores y lectores vean la respuesta. */}
+      <p className="faq-item-answer" hidden={!open}>
+        {answer}
+      </p>
     </div>
   );
 }

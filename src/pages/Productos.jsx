@@ -1,4 +1,5 @@
-import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import { useSeo } from '../hooks/useSeo';
+import { PAGES } from '../seo';
 import Button from '../components/Button';
 import SegmentCard from '../components/SegmentCard';
 import BrandBadge from '../components/BrandBadge';
@@ -66,7 +67,7 @@ const STEPS = [
 ];
 
 function Productos() {
-  useDocumentTitle('Productos y marcas — Rodamar SRL');
+  useSeo(PAGES.productos);
 
   return (
     <>

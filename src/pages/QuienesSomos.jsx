@@ -1,4 +1,5 @@
-import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import { useSeo } from '../hooks/useSeo';
+import { PAGES } from '../seo';
 import Button from '../components/Button';
 import StatCard from '../components/StatCard';
 import TeamMember from '../components/TeamMember';
@@ -36,7 +37,7 @@ const EXPEDICION = [
 ].map((name) => ({ name }));
 
 function QuienesSomos() {
-  useDocumentTitle('Quiénes somos — Rodamar SRL');
+  useSeo(PAGES.quienesSomos);
 
   return (
     <>

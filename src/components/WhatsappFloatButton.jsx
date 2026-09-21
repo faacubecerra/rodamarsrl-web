@@ -32,8 +32,14 @@ function readStoredPosition() {
 }
 
 function WhatsappFloatButton() {
-  const [position, setPosition] = useState(() => readStoredPosition() || getDefaultPosition());
+  // La posición depende de window/localStorage: se calcula recién en el cliente, tras montar
+  // (así el HTML prerenderizado y la hidratación coinciden).
+  const [position, setPosition] = useState(null);
   const drag = useRef({ dragging: false, moved: false, offsetX: 0, offsetY: 0 });
+
+  useEffect(() => {
+    setPosition(readStoredPosition() || getDefaultPosition());
+  }, []);
 
   useEffect(() => {
     function handleResize() {
@@ -101,6 +107,8 @@ function WhatsappFloatButton() {
       drag.current.moved = false;
     }
   }
+
+  if (!position) return null;
 
   return (
     <a

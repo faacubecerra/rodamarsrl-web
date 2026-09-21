@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import { useSeo } from '../hooks/useSeo';
+import { PAGES } from '../seo';
+import { FAQS } from '../data/faqs';
 import Button from '../components/Button';
 import FaqItem from '../components/FaqItem';
 import { IconMapPin, IconPhone, IconMail, IconClock, IconWhatsapp } from '../components/icons';
@@ -11,30 +13,8 @@ const MAPS_URL =
 
 const MOTIVOS = ['Industria', 'Agro', 'Automotor', 'Otra consulta'];
 
-const FAQS = [
-  {
-    question: '¿Puedo ver stock, precios y hacer pedidos sin llamar?',
-    answer:
-      'Sí, desde nuestra App podés consultar stock y precios actualizados al instante, y hacer tu pedido directamente ahí.',
-  },
-  {
-    question: '¿Hacen envíos a todo el país?',
-    answer:
-      'Sí, con despachos diarios por el transporte que elijas, y reparto propio en Rosario y alrededores.',
-  },
-  {
-    question: '¿Atienden industrias fuera de horario?',
-    answer: 'Sí, ofrecemos servicio 24/7 para industrias bajo contrato.',
-  },
-  {
-    question: '¿Con qué marcas trabajan?',
-    answer:
-      'Marcas Premium como NTN, TIMKEN e INA-FAG, además de alternativas intermedias y económicas según la aplicación.',
-  },
-];
-
 function Contacto() {
-  useDocumentTitle('Contacto — Rodamar SRL');
+  useSeo(PAGES.contacto);
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event) {
@@ -64,7 +44,10 @@ function Contacto() {
               </li>
               <li>
                 <IconPhone />
-                <span>+54 9 341 435-1216 / +54 9 341 418-0100</span>
+                <span>
+                  <a href="tel:+5493414351216">+54 9 341 435-1216</a> /{' '}
+                  <a href="tel:+5493414180100">+54 9 341 418-0100</a>
+                </span>
               </li>
               <li>
                 <IconWhatsapp />
